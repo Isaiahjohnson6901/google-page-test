@@ -1,5 +1,20 @@
 <style>
+    #search-button {
+        background-color: #00F;
+        color: #FFF;
+        align-items: center;
+        display: flex;
+        margin: auto;
+        width: 150px;
+    }
+    #search-button2 {
+        margin: auto;
+        display: flex;
+        width: 150px;
+    }
     #main-google-image {
+        padding-bottom: 25px;
+        padding-top: 100px;
     }
     #search-box {
         border-radius: 24px;
@@ -14,18 +29,22 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-top: auto;
-        margin-bottom: auto;
     }
 </style>
-
 <!DOCTYPE html>
 <html>
-    <div><img class="center" id="main-google-image" src="/home/ubuntu/Desktop/google-project/project-images/googleimage.jpg" alt"">
-        </div>
-            <input class ="center" type="search" id="search-box" name="search-box">
-                
-
+    <div><a href="">About</a> <a href="">Store</a>
+    </div>
+    <div>
+        <img class="center" id="main-google-image" src="/home/ubuntu/Desktop/google-project/project-images/googleimage.jpg" alt"">
+    </div>
+            <div>
+                <input class ="center" type="search" id="search-box" name="search-box">
+            </div>
+                <div>
+                    <button id="search-button" type="button">Google Search</button>
+                    <button id="search-button2" type="button">I'm Feeling Lucky</button>
+                </div>
 
 
 
