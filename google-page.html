@@ -8,6 +8,7 @@
         margin: auto;
         width: 150px;
         display: grid;
+        border-radius: 1px;
     }
     input {
         text-indent: 20px;
@@ -24,6 +25,7 @@
         display: flex;
         width: 150px;
         display: grid;
+        border-radius: 1px;
     }
     #main-google-image {
         padding-bottom: 25px;
@@ -44,9 +46,12 @@
         margin-right: auto;
     }
     #footer {
+        border-width: thin;
         position:absolute;
-        width: 100vpw;
+        align-items: center;
+        width: 100%;
         bottom: 0px;
+        height: 40px;
         background-color: rgb(242,242,242);
         display: grid;
         grid-template-columns: 3fr 10fr 3fr;
@@ -55,6 +60,7 @@
     }
     #footer1 {
         grid-area: footer1;
+        padding-left: 15px;
     }
     #blank-space {
         grid-area: blank-space;
@@ -62,6 +68,10 @@
     #footer2 { 
         text-align: right;
         grid-area: footer2;
+        padding-right: 15px;
+    }
+    body {
+        margin: 0px;
     }
 </style>
 <!DOCTYPE html>
