@@ -1,6 +1,24 @@
 <style>
-    html {
-        font-family: Arial;
+    a {
+        color: black;
+        opacity: 0.75;
+    }
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        display: block;
+    }
+    li {
+        display: inline;
+    }
+    #navbar a {
+        background-color: transparent;
+        text-decoration: none;
+        padding-left: 15px;
+    }
+    #navbar a:hover {
+        text-decoration: underline;
     }
     #search-button {
         align-items: center;
@@ -70,14 +88,14 @@
         grid-area: footer2;
         padding-right: 15px;
     }
-    body {
-        margin: 0px;
-    }
 </style>
 <!DOCTYPE html>
 <html>
-    <div id="header">
-        <a href="">About</a> <a href="">Store</a>
+    <div id="navbar">
+    <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Store</a></li>
+    </ul>
     </div>
     <div id="image-and-buttons">
         <div>
