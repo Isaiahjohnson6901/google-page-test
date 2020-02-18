@@ -1,16 +1,29 @@
 <style>
+    html {
+        font-family: Arial;
+    }
     #search-button {
-        background-color: #00F;
-        color: #FFF;
         align-items: center;
         display: flex;
         margin: auto;
         width: 150px;
+        display: grid;
+    }
+    input {
+        text-indent: 20px;
+    }
+    #search-buttons {
+        padding-top: 20px;
+        width: 100%;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 175px 175px;
     }
     #search-button2 {
         margin: auto;
         display: flex;
         width: 150px;
+        display: grid;
     }
     #main-google-image {
         padding-bottom: 25px;
@@ -20,7 +33,7 @@
         border-radius: 24px;
         width: 482px;
         height: 44px;
-        border-width: thick;
+        border-width: thin;
     }
     #search-box:hover {
         box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
@@ -30,22 +43,47 @@
         margin-left: auto;
         margin-right: auto;
     }
+    #footer {
+        position:absolute;
+        width: 100vpw;
+        bottom: 0px;
+        background-color: rgb(242,242,242);
+        display: grid;
+        grid-template-columns: 3fr 10fr 3fr;
+        grid-template-areas: 
+            "footer1 blank-space footer2";
+    }
+    #footer1 {
+        grid-area: footer1;
+    }
+    #blank-space {
+        grid-area: blank-space;
+    }
+    #footer2 { 
+        text-align: right;
+        grid-area: footer2;
+    }
 </style>
 <!DOCTYPE html>
 <html>
-    <div><a href="">About</a> <a href="">Store</a>
+    <div id="header">
+        <a href="">About</a> <a href="">Store</a>
     </div>
-    <div>
-        <img class="center" id="main-google-image" src="/home/ubuntu/Desktop/google-project/project-images/googleimage.jpg" alt"">
-    </div>
+    <div id="image-and-buttons">
+        <div>
+            <img class="center" id="main-google-image" src="/home/ubuntu/Desktop/google-project/project-images/googleimage.jpg" alt"">
+         </div>
             <div>
                 <input class ="center" type="search" id="search-box" name="search-box">
             </div>
-                <div>
+                <div id="search-buttons">
                     <button id="search-button" type="button">Google Search</button>
                     <button id="search-button2" type="button">I'm Feeling Lucky</button>
                 </div>
-
-
-
+    </div>
+    <div id="footer">
+           <div id="footer1"><a href="">Advertising</a> <a href="">Business</a> <a href="">How Search works</a> </div>
+           <div id="blank-space"></div>
+            <div id="footer2"><a href="">Privacy</a> <a href="">Terms</a> <a href="">Settings</a> </div>
+    </div>
 </html>
