@@ -12,8 +12,16 @@
     li {
         display: inline;
     }
+    .both-navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "navbar1 navbar2";
+    }
     #navbar {
-        padding-top: 15px;
+        width: 960px;
+        padding-top: 10px;
+        grid-area: navbar1;
     }
     #navbar a {
         font-size: 14px;
@@ -23,6 +31,24 @@
         font-family: Arial;
     }
     #navbar a:hover {
+        text-decoration: underline;
+    }
+    #navbar2 {
+        grid-area: navbar2;
+        width: 960px;
+        padding-top: 15px;
+        
+        justify-content: end;
+        display: flex;
+    }
+    #navbar2 a {
+        font-size: 14px;
+        background-color: transparent;
+        text-decoration: none;
+        font-family: Arial;
+        padding-right: 15px;
+    }
+    #navbar2 a:hover {
         text-decoration: underline;
     }
     #search-button {
@@ -58,6 +84,12 @@
         font-family: Arial;
         background-color: transparent;
     }
+    #search-button:hover {
+        background-color: #0f59b9
+    }
+    #search-button2:hover {
+        background-color: #dfe1e5a2; 
+    }
     #main-google-image {
         padding-bottom: 25px;
         padding-top: 100px;
@@ -84,7 +116,7 @@
     }
     #footer {
         border-style: solid;
-        border-color: rgba(242,242,242,0.4);
+        border-color: #e4e4e4;
         border-width: thin 0 0 0;
         position:absolute;
         align-items: center;
@@ -101,22 +133,25 @@
         text-decoration: none;
         font-size: 14px;
         font-family: Arial;
-        padding-left: 14px;
     }
     #footer a:hover {
         text-decoration: underline;
     }
-    #footer1 {
+    #footer1 a {
         grid-area: footer1;
         padding-left: 15px;
     }
     #blank-space {
         grid-area: blank-space;
     }
-    #footer2 { 
-        text-align: right;
+    #footer2 a { 
+        align-content: right;
         grid-area: footer2;
         padding-right: 15px;
+    }
+    #footer2 {
+        display: flex;
+        justify-content: end;
     }
     body {
         margin: 0px;
@@ -135,12 +170,21 @@
 </style>
 <!DOCTYPE html>
 <html>
+
+<div class="both-navbar">
     <div id="navbar">
     <ul>
         <li><a href="">About</a></li>
         <li><a href="">Store</a></li>
     </ul>
     </div>
+    <div id="navbar2">
+    <ul>
+        <li><a href="">Gmail</a></li>
+        <li><a href="">Images</a></li>
+    </ul>
+    </div>
+</div>
     <div id="image-and-buttons">
         <div>
             <img class="center" id="main-google-image" src="project-images/googleimage.jpg" alt""> 
